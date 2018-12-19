@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/prize/prize",
+    "pages/rank/rank"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "测试小程序",
+    "navigationBarBackgroundColor": "#1cc01a",
+    "backgroundColor": "#f5f5f5",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1cc01a",
+    "borderStyle": "#f5f5f5",
+    "backgroundColor": "#fffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index_active.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/prize/prize",
+        "iconPath": "images/icon/prize.png",
+        "selectedIconPath": "images/icon/prize_active.png",
+        "text": "奖品"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "iconPath": "images/icon/rank.png",
+        "selectedIconPath": "images/icon/rank_active.png",
+        "text": "榜单"
+      }
+    ]
+  }
+}
