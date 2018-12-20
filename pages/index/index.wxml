@@ -5,15 +5,15 @@
   </view>
   <view class="index-total">
     <view class="total-col">
-      <view><text>已报名</text></view>
+      <view><text class="iconfont icon-bz"></text><text>已报名</text></view>
       <text>98</text>
     </view>
     <view class="total-col bd">
-      <view><text>累计投票</text></view>
+      <view><text><text class="iconfont icon-zan"></text>累计投票</text></view>
       <text>1777065</text>
     </view>
     <view class="total-col">
-      <view><text>访问了</text></view>
+      <view><text><text class="iconfont icon-fw"></text>访问了</text></view>
       <text>1777065</text>
     </view>
   </view>
@@ -57,7 +57,7 @@
 
   <view class="rule-explain">
     <view class="explain-title">
-      <text>规则说明</text>
+      <text class="iconfont icon-wenjian"></text><text>规则说明</text>
     </view>
     <view class="explain-content">
       <text>一、 项目背景 
