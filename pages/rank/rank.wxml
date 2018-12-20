@@ -1,2 +1,35 @@
-<!--pages/rank/rank.wxml-->
-<text>pages/rank/rank.wxml</text>
+<view>
+  <view class='count_down_tips'><text>活动结束倒计时</text></view>
+  <view class='count_down_container'>
+    <view class="count_down_sub">0天</view>
+    <view class="count_down_sub">0时</view>
+    <view class="count_down_sub">00分</view>
+    <view class="count_down_sub">00秒</view>
+  </view>
+
+  <view class='tab'>
+    <view class="tab_item {{rankType === 'piao'?'tab_active':''}}" bindtap='changeRankTypeToPiao'>票数榜</view>
+    <view class="tab_item {{rankType === 'gift'?'tab_active':''}}" bindtap='changeRankTypeToGift'>礼物榜</view>
+  </view>
+
+  <view class='rank_list_container'>
+    <view class='rank_item' wx:for="{{rankList}}">
+      <view class="head_img">
+        
+        <image src="{{item.headImage}}"></image>
+        <view class='goldking'>
+          <image wx:if="{{(index+1)<=3}}" src="../../images/icon/goldking.png"></image>
+          <image wx:if="{{(index+1)>3}}" src="../../images/icon/king.png"></image>
+        </view>
+      </view>
+      <view class="rank_item_detail">
+        <view class='rank_item_name'>{{item.name}}</view>
+        <view class='rank_item_num'>票数 {{item.piaoNum}} 礼物 {{item.giftNum}}点</view>
+        <view class='rank_item_desc'>{{item.desc}}</view>
+      </view>
+      <view class="rank_item_sort {{(index+1)<=3? 'sort_red':''}}">
+        {{index+1}}
+      </view>
+    </view>
+  </view>
+</view>

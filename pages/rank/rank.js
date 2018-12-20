@@ -5,9 +5,69 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      rankType:'piao',
+      rankList:[
+        {
+          headImage:'../../images/detail1.jpg',
+          name:'姜佩佩 9号',
+          piaoNum:103900,
+          giftNum:8137,
+          desc:'给我一个舞台,还你一片精彩'
+        },
+        {
+          headImage: '../../images/detail1.jpg',
+          name: '姜佩佩 9号',
+          piaoNum: 103900,
+          giftNum: 8137,
+          desc: '给我一个舞台,还你一片精彩'
+        },
+        {
+          headImage: '../../images/detail1.jpg',
+          name: '姜佩佩 9号',
+          piaoNum: 103900,
+          giftNum: 8137,
+          desc: '给我一个舞台,还你一片精彩'
+        },
+        {
+          headImage: '../../images/detail1.jpg',
+          name: '姜佩佩 9号',
+          piaoNum: 103900,
+          giftNum: 8137,
+          desc: '给我一个舞台,还你一片精彩'
+        },
+        {
+          headImage: '../../images/detail1.jpg',
+          name: '姜佩佩 9号',
+          piaoNum: 103900,
+          giftNum: 8137,
+          desc: '给我一个舞台,还你一片精彩'
+        },
+        {
+          headImage: '../../images/detail1.jpg',
+          name: '姜佩佩 9号',
+          piaoNum: 103900,
+          giftNum: 8137,
+          desc: '给我一个舞台,还你一片精彩'
+        },
+        {
+          headImage: '../../images/detail1.jpg',
+          name: '姜佩佩 9号',
+          piaoNum: 103900,
+          giftNum: 8137,
+          desc: '给我一个舞台,还你一片精彩'
+        }
+      ]
   },
-
+  changeRankTypeToPiao(){
+      this.setData({
+        rankType: 'piao'
+      })
+  },
+  changeRankTypeToGift() {
+    this.setData({
+      rankType: 'gift'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

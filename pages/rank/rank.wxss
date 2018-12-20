@@ -1,1 +1,120 @@
 /* pages/rank/rank.wxss */
+.count_down_tips{
+  margin-top: 10rpx;
+  color: #999;
+  text-align: center;
+  margin-bottom: 30rpx;
+  font-size: 16px;
+}
+.count_down_container{
+  flex-direction:row;
+  display:flex;
+  justify-content:center;
+  margin-bottom: 30rpx;
+}
+.count_down_sub{
+  font-size: 12px;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #B8B8B8;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  color: #B8B8B8;
+  padding: 0 15rpx 0 15rpx;
+  box-shadow: darkgrey 1px 1px 1px 1px;
+}
+.tab{
+  flex-direction:row;
+  display:flex;
+  justify-content:center;
+}
+.tab_item{
+  color: #999;
+  text-align: center;
+  font-size: 15px;
+  line-height: 70rpx;
+  width: 47%;
+  border: 1px solid #999;
+}
+.tab_item:first-child{
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+  border-right: 0rpx;
+}
+.tab_item:last-child{
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}
+.tab_active{
+  color:blueviolet;
+}
+
+.rank_item{
+  border-bottom: 1px;
+  border-bottom-color: #D0D0D0;
+  border-bottom-style: solid;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  height: 120rpx;
+  width: 95%;
+  margin: 20rpx auto;
+  padding-bottom: 30rpx;
+}
+.rank_item_detail{
+  flex-grow: 1;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-around;
+  height: 120rpx;
+}
+.rank_item_detail .rank_item_name{
+  font-size: 14px;
+  font-weight: bold;
+  color: #303030;
+}
+.rank_item_detail .rank_item_num{
+  font-size: 11px;
+  color: #303030;
+}
+.rank_item_detail .rank_item_desc{
+  font-size: 11px;
+  color: #303030;
+}
+.rank_item_sort{
+  width: 100rpx;
+  text-align: center;
+  line-height: 120rpx;
+}
+.sort_red{
+  color: red;
+}
+.head_img{
+  position:relative;
+  width: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  margin-top: 30rpx;
+}
+.head_img .goldking{
+  position:absolute;
+  left: 12%;
+  top: -38%;
+  z-index: -1;
+}
+.head_img .goldking image{
+  width: 70rpx;
+  height: 50rpx;
+  z-index: -1;
+}
+.head_img image{
+  z-index: 1;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.rank_list_container{
+  margin-bottom: 30rpx;
+}
