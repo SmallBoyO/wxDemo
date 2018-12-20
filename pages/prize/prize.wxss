@@ -1,1 +1,11 @@
 /* pages/prize/prize.wxss */
+.prize-content{
+  padding: 20rpx;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #444444;
+}
+.crucial-text{
+  color: red;
+  font-weight: bold;
+}

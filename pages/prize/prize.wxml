@@ -1,2 +1,11 @@
 <!--pages/prize/prize.wxml-->
-<text>pages/prize/prize.wxml</text>
+<!--index.wxml-->
+<view class="container">
+  <view class="prize-content">
+    <text>投票时间为20天，投票所有买礼物的钱都可1:1比例折算为星计划文化传媒有限公司的现金消费劵。
+《童说永州》投票选前15名，第一名可获得5部微电影的主要角色，第二名可获得4部微电影主要角色，第三名可获得3部微电影主要角色，第四至10名可获得两部微电影主要角色，11-15名可获得1部微电影主要角色。
+微电影拍摄为每个星期的周末两天及寒暑假。
+</text>
+    <text class="crucial-text">重要说明：买礼物的点数都可按1:1比例折算为星计划文化传媒有限公司的现金消费劵。</text>
+  </view>
+</view>

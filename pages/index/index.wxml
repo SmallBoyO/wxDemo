@@ -1,16 +1,104 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="index_banner">
-    <image src="{}"></image>
+  <view class="index-banner">
+    <image class="bannder-image" src="{{bannerUrl}}"></image>
   </view>
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="index-total">
+    <view class="total-col">
+      <view><text class="iconfont icon-bz"></text><text>已报名</text></view>
+      <text>98</text>
+    </view>
+    <view class="total-col bd">
+      <view><text><text class="iconfont icon-zan"></text>累计投票</text></view>
+      <text>1777065</text>
+    </view>
+    <view class="total-col">
+      <view><text><text class="iconfont icon-fw"></text>访问了</text></view>
+      <text>1777065</text>
+    </view>
+  </view>
+  <view class="list-box">
+
+    <view class="list-head">
+      <text class="list-head-title">活动结束倒计时</text>
+      <view class="count-down">
+        <text class="count-down-item">0天</text>
+        <text class="count-down-item">00时</text>
+        <text class="count-down-item">00分</text>
+        <text class="count-down-item">00秒</text>
+      </view>
+    </view>
+
+    <view class="search-box">
+      <view class="search-form">
+        <input class="search-input" placeholder="请输入编号或姓名" placeholder-class="placeholder-class" bindinput="bindSearchInput" />
+        <button class="search-btn" bindtap="searchList">搜索</button>
+      </view>
+    </view>
+
+    <view class="list-content">
+      <view class="list-left">
+        <block wx:for="{{actorList}}" wx:key="">
+          <template is="list-item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="list-right">
+        <block wx:for="{{actorList}}" wx:key="">
+          <template is="list-item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+    
+    <block wx:if="{{isMore}}" >
+    <button bindtap="getMoreByPage" class="more-btn">{{listLoading}}</button>
     </block>
+
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <view class="rule-explain">
+    <view class="explain-title">
+      <text class="iconfont icon-wenjian"></text><text>规则说明</text>
+    </view>
+    <view class="explain-content">
+      <text>一、 项目背景 
+我们国家的儿童影视剧在电影、电视剧方面已经取得了辉煌的成绩。但是，距离国家3.6亿儿童的精神需求相比，还是非常不够。中国文联副主席、著名视评论家仲呈祥曾经有八个字的形象描述：“3亿儿童，嗷嗷待哺”。
+少年儿童影视文化教育在世界一些发达国家的艺术教育中得到高度重视。现代社会中，艺术媒介迅速向网络化方向发展，以艺术广告、电视和多媒体网络为主体的媒介已日益成为社会大众的艺术文化知识的来源和基本生活内容，并日益重构大众艺术。心理感知的格局，它彻底超越了时空的阻隔，有力促进了世界艺术一体化格局。
+《童说永州》正是在这一情况下应运而生的。
+二、项目简介 
+名    称：“童说永州”永州首部当代青少年素质教育系列小电影童星选拔大赛
+           系列小电影以每年拍摄至少50-100集
+举办时间：2018年11月---2019年2月
+投票时间：2018年12月3日---2018年12月18日
+主办单位: 永州市星计划文化传媒有限公司 
+承办单位：
+技术支持：湖南合赢信息科技有限公司
+媒体支持：  新浪网、优酷网、腾讯网、新华网、人民网、搜狐网等
+01.一个微信号每天只能给同一个选手投五票
+02.一个微信号每天可以给5位选手投票
+03.一个IP最多只允许10个微信号参与
+04.一个IP每天最多只允许50个投票
+05.本次活动仅限永州地区参与
+06.报名提交的照片必须拥有所有权或经由所有权人授权，对因照片产生的纠纷由参赛者本人承担。
+违反规则的投票，主办方有权封ip 剔除非正常数据 取消选手资格等。
+本次活动所有解释权归主办方所有
+
+本次活动由湖南合赢信息科技有限公司全程技术支持</text>
+    </view>
   </view>
+
 </view>
+
+<!--  下面是一个模块 -->
+<template name="list-item">
+  <view class="list-item" bindtap="goDetail" data-detailId="id">
+    <image class="item-pic" src="{{pic}}" mode="widthFix"></image>
+    <view class="item-tag">
+      <text>{{id}}号，{{star}}票</text>
+    </view>
+    <view class="item-info">
+      <text class="info-name">{{name}}</text>
+      <text class="star-btn">投票</text>
+    </view>
+  </view>
+
+</template>
